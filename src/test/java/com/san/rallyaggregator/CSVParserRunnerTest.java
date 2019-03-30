@@ -38,7 +38,7 @@ public class CSVParserRunnerTest {
 		URL url = getClass().getResource("export.csv");
 		File exportedCSVData = new File(url.getPath());
 		List<RallyItem> parseCSVData = parser.parseCSVData(exportedCSVData);
-		List<RallyItem> filteredItemsByCategory = aggregator.getFilteredItemsByCategory(parseCSVData, RallyCategory.KEYWORD, "IPv6");
+		List<RallyItem> filteredItemsByCategory = aggregator.getFilteredItemsByCategory(RallyCategory.KEYWORD, "IPv6");
 		System.out.println("Rally Deect list for Prasanna:");
 		filteredItemsByCategory.forEach(new Consumer<RallyItem>() {
 
@@ -56,7 +56,7 @@ public class CSVParserRunnerTest {
 		URL url = getClass().getResource("export.csv");
 		File exportedCSVData = new File(url.getPath());
 		List<RallyItem> parseCSVData = parser.parseCSVData(exportedCSVData);
-		List<RallyItem> filteredItemsByCategory = aggregator.getFilteredItemsByCategory(parseCSVData, RallyCategory.KEYWORD, "IPv6");
+		List<RallyItem> filteredItemsByCategory = aggregator.getFilteredItemsByCategory(RallyCategory.KEYWORD, "IPv6");
 		System.out.println("Rally Defect list with keyword: IPv6");
 		filteredItemsByCategory.forEach(new Consumer<RallyItem>() {
 

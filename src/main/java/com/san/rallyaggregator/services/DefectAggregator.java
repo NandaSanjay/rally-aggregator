@@ -8,19 +8,27 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.function.Consumer;
 
+import javax.annotation.Resource;
+import org.springframework.stereotype.Service;
 import static java.util.stream.Collectors.*;
-
 import com.san.rallyaggregator.model.RallyItem;
+
+import com.san.rallyaggregator.repository.RallyItemsRepository;
 import com.san.rallyaggregator.utils.RallyCategory;
 
 /**
  * @author nandasan
  *
  */
+@Service("aggregator")
 public class DefectAggregator {
+	
+	@Resource
+	RallyItemsRepository repository;
 
-	public List<RallyItem> getFilteredItemsByCategory(List<RallyItem> items, RallyCategory category, String value) throws Exception
+	public List<RallyItem> getFilteredItemsByCategory(RallyCategory category, String value) throws Exception
 	{
+		List<RallyItem> items = repository.findAll();
 		switch (category) {
 		case OWNER:
 			return items.stream().filter(item -> item.getOwner().toLowerCase().contains(value.toLowerCase())).collect(toList());
