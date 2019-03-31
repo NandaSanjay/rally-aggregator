@@ -32,6 +32,8 @@ import com.san.rallyaggregator.utils.RallyCategory;
 @RestController
 public class ItemsResourceController implements ServletContextAware  {
 	
+	private static final String BASE_RESOURCE_PATH = "/src/main/resources/";
+
 	@Resource(name = "rallyItemService")
 	RallyItemService service;
 	
@@ -53,7 +55,7 @@ public class ItemsResourceController implements ServletContextAware  {
          *      fos.close();
 		 */
 		
-		File inputFile = new File(context.getRealPath("/") + file.getOriginalFilename());
+		File inputFile = new File(context.getRealPath("/")+ BASE_RESOURCE_PATH + file.getOriginalFilename());
 		inputFile.createNewFile();
 		file.transferTo(inputFile);
 

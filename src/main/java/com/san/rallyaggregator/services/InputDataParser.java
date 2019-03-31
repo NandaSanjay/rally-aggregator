@@ -11,20 +11,13 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.function.Consumer;
 
-<<<<<<< HEAD
-=======
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
->>>>>>> COmmit#1 CSV parser and exporter services
 import com.san.rallyaggregator.executors.CSVParserRunner;
 import com.san.rallyaggregator.executors.TaskExecutor;
 import com.san.rallyaggregator.model.RallyItem;
 
-<<<<<<< HEAD
-=======
 @Service("fileParser")
->>>>>>> COmmit#1 CSV parser and exporter services
 public class InputDataParser {
 	
 	TaskExecutor executor = new TaskExecutor();

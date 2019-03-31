@@ -26,3 +26,8 @@
 
 ### VS Code ###
 .vscode/
+
+/src/main/resources/export.csv	
+/src/test/resources/
+	
+	

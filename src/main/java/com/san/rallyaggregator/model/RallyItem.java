@@ -1,16 +1,11 @@
 package com.san.rallyaggregator.model;
 
-<<<<<<< HEAD
-public class RallyItem {
-	
-=======
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
 public class RallyItem {
 	@Id
->>>>>>> COmmit#1 CSV parser and exporter services
 	private String Id;
 	private String name;
 	private String requirement;
@@ -21,13 +16,10 @@ public class RallyItem {
 	private String owner;
 	private String color;
 
-<<<<<<< HEAD
-=======
 	public RallyItem() {
 		super();
 	}
 
->>>>>>> COmmit#1 CSV parser and exporter services
 	public String getId() {
 		return Id;
 	}
